@@ -1,12 +1,12 @@
 import styles from './Card.module.css'
 import Button from '../Button'
 
-export default function Card() {
+export default function Card(props) {
     return (
         <div className={styles.card}>
-            <img src="https://i.pinimg.com/originals/ba/94/64/ba9464145eba8762f6286a3c8387c951.jpg" alt="star-wars" />
+            <img src={props.posterImg} alt={props.title} />
             <div>
-                <h1>Pôster: Star Wars (1977)</h1>
+                <h1>{props.title}</h1>
                 <p>
                     Um pôster decorativo épico do filme Star Wars, com moldura de MDF e tamanho
                     A3. Uma ótima recordação de um dos mais icônicos filmes de todos os tempos.
@@ -14,7 +14,7 @@ export default function Card() {
                     para qualquer lugar que você decidir pendurar. Não perca a chance de adicionar
                     essa linda memória ao seu acervo.
                 </p>
-                <Button/>
+                <Button text="Comprar agora"/>
             </div>
         </div>
     )

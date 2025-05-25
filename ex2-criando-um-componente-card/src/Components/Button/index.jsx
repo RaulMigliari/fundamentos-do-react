@@ -1,5 +1,5 @@
 import styles from './Button.module.css'
 
-export default function Button() {
-    return <button style={styles.button}>Comprar agora!</button>
+export default function Button(props) {
+    return <button style={styles.button}>{props.text}</button>
 }
