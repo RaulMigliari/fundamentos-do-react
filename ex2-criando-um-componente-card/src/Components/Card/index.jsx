@@ -1,4 +1,5 @@
-import styles from '../App.module.css'
+import styles from './Card.module.css'
+import Button from '../Button'
 
 export default function Card() {
     return (
@@ -13,7 +14,7 @@ export default function Card() {
                     para qualquer lugar que você decidir pendurar. Não perca a chance de adicionar
                     essa linda memória ao seu acervo.
                 </p>
-                <button>Comprar agora</button>
+                <Button/>
             </div>
         </div>
     )

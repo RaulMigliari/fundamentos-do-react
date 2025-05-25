@@ -1,5 +1,6 @@
 .card {
-    min-height: 100vh;
+    height: 25rem;
+    width: 70rem;
     background-color: #b9cadd;
     display: flex;
     gap: 3rem;
@@ -23,17 +24,4 @@
 .card div > p{
     margin-top: 3rem;
     margin-bottom: 3rem;
-}
-
-.card div > button {
-    background-color: #000;
-    color: #fff;
-    padding: 1rem;
-    border: 0;
-    border-radius: .75rem;
-}
-
-.card div > button:hover {
-    background-color: #313131;
-    cursor: pointer;
 }
