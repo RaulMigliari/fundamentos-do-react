@@ -1,0 +1,10 @@
+.linkButton {
+    background: linear-gradient(to left, #81bcf8, #0755a3);
+    padding: 1rem;
+    border-radius: .5rem;
+    border: 0;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    width: 10rem;
+}
