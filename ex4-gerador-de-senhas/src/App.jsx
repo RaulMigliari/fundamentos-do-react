@@ -5,21 +5,23 @@ export default function App() {
   const [password, setPassword] = useState('')
   const [textButtonCopy, setTextButtonCopy] = useState('Copiar')
 
-  function generatePassword(size) {
+  function generatePassword() {
     const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let resultado = '';
-    for (let i = 0; i < size; i++) {
+    let length = 12
+    let newPassword = ''
+    for (let i = 0; i < length; i++) {
       const indiceAleatorio = Math.floor(Math.random() * caracteres.length);
-      resultado += caracteres[indiceAleatorio];
+      newPassword += caracteres[indiceAleatorio];
     }
-    return resultado;
+    setPassword(newPassword)
+    setTextButtonCopy('Copiar')
   }
 
   return (
     <div className='app'>
       <h1>Gerador de senhas</h1>
       <div>
-        <button onClick={() => setPassword(generatePassword(10))}>Gerar!</button>
+        <button onClick={generatePassword}>Gerar!</button>
         <button 
         onClick={() => {
           navigator.clipboard.writeText(password)
