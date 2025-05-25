@@ -2,13 +2,23 @@ import LinkButton from "../LinkButton";
 import Title from "../Title";
 import styles from "./styles.module.css"
 
+function handleClick(ev) {
+    console.log(ev)
+    alert('Você agora está seguindo!')
+}
+
 export default function Profile(props) {
     return (
         <div className={styles.profileCard}>
             <img src={props.avatar} alt={props.name} />
             <Title>
                 <span>{props.name}</span>
-                {/* <button>Follow-me</button> */}
+                <button 
+                    onClick={handleClick}
+                    className={styles.followButton}
+                >
+                    Follow-me
+                </button>
             </Title>
             <p>{props.bio}</p>
             <p>{props.tel}</p>
