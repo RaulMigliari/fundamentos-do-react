@@ -30,13 +30,6 @@ body {
     margin-bottom: 2rem;
 }
 
-.input > input {
-    background-color: #0f0f0f;
-    color: #fff;
-    border-radius: .5rem;
-    padding: .5rem;
-}
-
 .app > div button {
     background-color: #0f0f0f;
     color: #fff;

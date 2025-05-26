@@ -1,5 +1,6 @@
-import { use, useState } from 'react'
+import { useState } from 'react'
 import './styles/globals.css'
+import InputPasswordSize from './components/InputPasswordSize/InputPasswordSize'
 
 export default function App() {
   const [password, setPassword] = useState('')
@@ -22,13 +23,7 @@ export default function App() {
       <h1>Gerador de senhas</h1>
       <div className='input'>
         <label htmlFor="passwordSize">Tamanho:</label>
-        <input
-          type="number"
-          id='passwordSize'
-          min={1}
-          value={passwordSize}
-          onChange={(ev) => {setPasswordSize(ev.target.value)}}
-        />
+        <InputPasswordSize passwordSize={passwordSize} setPasswordSize={setPasswordSize}/>
       </div>
       <div>
         <button onClick={generatePassword}>Gerar!</button>
