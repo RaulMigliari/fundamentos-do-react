@@ -1,0 +1,12 @@
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.input input {
+    min-height: 3rem;
+}
+
+.input textarea {
+    min-height: 10rem;
+}

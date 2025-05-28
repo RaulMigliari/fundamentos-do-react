@@ -1,0 +1,9 @@
+.formControl {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formControl button {
+    min-height: 3rem;
+}
