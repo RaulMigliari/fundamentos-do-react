@@ -5,6 +5,8 @@ import Products from "./pages/Products";
 import Product from "./pages/Product";
 import RootLayout from "./pages/RootLayout";
 import { createBrowserRouter } from "react-router-dom";
+import { loadProduct } from "./loaders/product";
+import ProductBoundary from "./error-boundaries/ProductBoundary";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +23,9 @@ const router = createBrowserRouter([
             }, 
             {
                 path: "products/:productId",
-                element: <Product />
+                element: <Product />,
+                loader: loadProduct,
+                errorElement: <ProductBoundary />
             },
             {
                 path: "cart",
