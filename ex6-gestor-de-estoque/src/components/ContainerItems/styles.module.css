@@ -1,0 +1,10 @@
+.container {
+    background-color: #1d1d1d;
+    border-radius: .25rem;
+    /* padding: 5rem 8rem; */
+    height: 15rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 4px 23px 0px rgba(0,0,0,0.75);
+}
