@@ -4,8 +4,8 @@ import Dashboard from "./pages/Dashboard";
 import Items from "./pages/Items";
 import RootItems from "./pages/RootItems/RootItems";
 import Item from "./pages/Item";
-import EditItem from "./pages/EditItem";
-import CreateItem from "./pages/CreateItem";
+import EditItem from "./pages/EditItem/EditItem";
+import CreateItem from "./pages/CreateItem/CreateItem";
 
 const router = createBrowserRouter([
     {

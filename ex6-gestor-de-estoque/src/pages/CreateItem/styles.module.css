@@ -1,0 +1,43 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.formInput input {
+    background-color: #1d1d1d;
+    border: 0;
+    border-radius: .25rem;
+    padding: .75rem;
+    color: #fff;
+    width: 17.15rem;
+    height: 3rem;
+}
+
+.formInput textarea {
+    background-color: #1d1d1d;
+    border: 0;
+    border-radius: .25rem;
+    color: #fff;
+    padding: 1rem;
+}
+
+.form button {
+    background-color: rgb(0, 132, 255);
+    border: 0;
+    padding: 1rem;
+    border-radius: .25rem;
+    margin-right: 70rem;
+}
+
+.form button:hover {
+    cursor: pointer;
+    background-color: rgb(115, 187, 255);
+}
