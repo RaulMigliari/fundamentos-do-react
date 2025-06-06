@@ -1,0 +1,17 @@
+.button {
+    padding: .75rem 1.5rem;
+    border-radius: .35rem;
+    border: 0;
+    margin-right: .5rem;
+}
+
+.button:hover {
+   cursor: pointer;
+}
+
+.container {
+    background-color: #1d1d1d;
+    padding: 1.25rem 2rem;
+    border-radius: .25rem;
+    box-shadow: 2px 4px 23px 0px rgba(0,0,0,0.50);
+}

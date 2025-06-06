@@ -1,0 +1,25 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+th {
+  text-align: left;
+  padding: 1rem;
+  background-color: #1f1f1f;
+  height: 5rem;
+}
+
+td {
+  padding: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}

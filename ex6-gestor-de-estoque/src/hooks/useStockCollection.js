@@ -9,7 +9,8 @@ export default function useStockCollection() {
 
     const addItem = ({name, quantity, price, category, description}) => {
         const id = Math.floor(Math.random() * 1000000)
-        const item = {id, name, quantity, price, category, description}
+        const date = new Date().toLocaleString()
+        const item = {id, name, quantity, price, category, description, date}
         setStock(state => {
             const newState = [...state, item]
             localStorage.setItem("obc-stock", JSON.stringify(newState))
@@ -28,7 +29,7 @@ export default function useStockCollection() {
     const editItem = (id, updatedData) => {
         setStock(state => {
             const newState = state.map(item => 
-                item.id === id ? {...item, ...updatedData} : item
+                String(item.id) === String(id) ? {...item, ...updatedData} : item
             )
             localStorage.setItem("obc-stock", JSON.stringify(newState))
             return newState

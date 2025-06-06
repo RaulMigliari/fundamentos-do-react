@@ -1,26 +1,28 @@
+import useStockCollection from "../../hooks/useStockCollection"
 import styles from "./styles.module.css"
+import { Link } from "react-router-dom"
 
-const items = [
-    {id: 1, name: "7 Wonders"},
-    {id: 2, name: "O Senhor dos Anéis"}
-]
+export default function ItemsTableFinishing() {
 
-export default function ItemsTable() {
+    const {stock} = useStockCollection()
+
     return (
         <table className={styles.table}>
             <thead>
                 <tr>
-                    <th>Itens Recentes</th>
+                    <th>Itens Acabando</th>
                     <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
-                {items.length > 0 
-                    ? items.map((item) => (
+                {stock.length > 0 
+                    ? stock
+                    .filter(item => item.quantity <= 10)
+                    .map((item) => (
                         <tr key={item.id}>
                             <td>{item.name}</td>
                             <td>
-                                <button className={styles.button}>Ver</button>
+                                <Link to={`/items/${item.id}`}><button className={styles.button}>Ver</button></Link>
                             </td>
                         </tr>
                     )) : (

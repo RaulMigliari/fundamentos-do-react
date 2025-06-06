@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "./pages/RootLayout/RootLayout";
 import Dashboard from "./pages/Dashboard";
-import Items from "./pages/Items";
+import Items from "./pages/Items/Items";
 import RootItems from "./pages/RootItems/RootItems";
-import Item from "./pages/Item";
+import Item from "./pages/Item/Item";
 import EditItem from "./pages/EditItem/EditItem";
 import CreateItem from "./pages/CreateItem/CreateItem";
 

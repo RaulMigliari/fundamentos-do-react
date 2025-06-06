@@ -1,6 +1,7 @@
 import { useState } from "react"
 import styles from "./styles.module.css"
 import useStockCollection from "../../hooks/useStockCollection"
+import { useNavigate } from "react-router-dom"
 
 export default function CreateItem() {
 
@@ -10,6 +11,7 @@ export default function CreateItem() {
     const [category, setCategory] = useState('')
     const [description, setDescription] = useState('')
     const { addItem } = useStockCollection()
+    const navigate = useNavigate()
 
     const handleSubmit = (ev) => {
 
@@ -22,6 +24,8 @@ export default function CreateItem() {
         setDescription('')
 
         addItem({name, quantity, price, category, description})
+        alert('Item criado!')
+        navigate('/items')
     }
 
     return (
